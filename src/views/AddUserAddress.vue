@@ -49,7 +49,8 @@
 </template>
 <script>
     import Footer from '../components/Footer.vue';
-    xport default {
+    
+    export default {
         name: 'AddUserAddress',
         data() {
             return {
