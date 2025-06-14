@@ -1,4 +1,5 @@
 <template>
+  <div class="wrapper">
   <div class="mine-page">
     <div class="mine-header">
       <img class="mine-avatar" src="https://avatars.githubusercontent.com/u/998733847?v=4" alt="头像">
@@ -41,11 +42,19 @@
         <span>用户隐私</span>
       </div>
     </div>
+    
   </div>
+  <!-- 底部菜单部分 -->
+<Footer></Footer>
+   </div>
 </template>
 
 <script>
+ import Footer from '../components/Footer.vue'; 
 export default {
+   components:{
+ Footer
+ },
   name: 'Mine',
   data() {
     return {
