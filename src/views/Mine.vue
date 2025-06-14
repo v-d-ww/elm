@@ -52,7 +52,7 @@
 <script>
  import Footer from '../components/Footer.vue'; 
 export default {
-   components:{
+  components:{
  Footer
  },
   name: 'Mine',

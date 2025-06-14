@@ -5,7 +5,7 @@
  <div class="icon-location-box">
  <div class="icon-location"></div>
  </div>
- <div class="location-text">沈阳市规划大厦<i class="fa fa-caret-down"></i></div>
+ <div class="location-text">天津市津南区<i class="fa fa-caret-down"></i></div>
  </header>
  <!-- search部分 -->
  <!-- 
@@ -17,7 +17,8 @@
  <div class="search-fixed-top" ref="fixedBox">
  <!-- 搜索框部分中间的白框 -->
  <div class="search-box">
- <i class="fa fa-search"></i>搜索饿了么商家、商品名称
+  <input type="text" style="height: 100%; width: 100%;" placeholder="搜索饿了么商家、商品名称">
+ <!-- <i class="fa fa-search"></i>搜索饿了么商家、商品名称 -->
  </div>
  </div>
  </div>
