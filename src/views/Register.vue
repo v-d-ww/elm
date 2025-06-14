@@ -84,22 +84,27 @@
                 });
             },
             register() {
-                if (this.user.userId == '') {
-                    alert('手机号码不能为空！');
-                    return;
-                }
-                if (this.user.password == '') {
-                    alert('密码不能为空！');
-                    return;
-                }
-                if (this.user.password != this.confirmPassword) {
-                    alert('两次输入的密码不一致！');
-                    return;
-                }
-                if (this.user.userName == '') {
-                    alert('用户名不能为空！');
-                    return;
-                }
+    if (this.user.userId == '') {
+        alert('手机号码不能为空！');
+        return;
+    }
+    // 手机号格式校验
+    if (!/^1\d{10}$/.test(this.user.userId)) {
+        alert('请输入正确的11位手机号！');
+        return;
+    }
+    if (this.user.password == '') {
+        alert('密码不能为空！');
+        return;
+    }
+    if (this.user.password != this.confirmPassword) {
+        alert('两次输入的密码不一致！');
+        return;
+    }
+    if (this.user.userName == '') {
+        alert('用户名不能为空！');
+        return;
+    }
  
                 //注册请求
                 this.$axios.post('UserController/saveUser', this.$qs.stringify(
