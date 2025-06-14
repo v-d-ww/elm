@@ -52,7 +52,7 @@
 <script>
  import Footer from '../components/Footer.vue'; 
 export default {
-  components:{
+   components:{
  Footer
  },
   name: 'Mine',
@@ -78,6 +78,8 @@ export default {
       // 清除本地缓存并跳转登录页
       localStorage.removeItem('userName');
       localStorage.removeItem('userInfo');
+      sessionStorage.removeItem('user');
+
       this.$router.replace({ path: '/login' });
       // 如有 UI 框架可加提示
       if (this.$notify) {
