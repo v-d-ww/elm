@@ -72,7 +72,7 @@ export default {
   },
   methods: {
      goAddress() {
-    this.$router.push({ path: '/address' })
+    this.$router.push({ path: '/userAddress' })
   },
     logout() {
       // 清除本地缓存并跳转登录页
