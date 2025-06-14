@@ -7,7 +7,7 @@
 
         <!-- 商家列表部分 -->
         <ul class="business">
-            <li v-for="item in businessArr" @click="toBusinessInfo(item.businessId)">
+            <li v-for="item in businessArr" @click="toBusinessInfo(item.businessId)" :key="item.id">
                 <div class="business-img">
                     <img :src="item.businessImg">
                     <div class="business-img-quantity" v-show="item.quantity > 0">

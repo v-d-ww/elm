@@ -6,7 +6,7 @@
         </header>
         <!-- 地址列表部分 -->
         <ul class="addresslist">
-            <li v-for="item in deliveryAddressArr">
+            <li v-for="item in deliveryAddressArr" :key="item.id">
                 <div class="addresslist-left" @click="setDeliveryAddress(item)">
                     <h3>{{ item.contactName }}{{ item.contactSex | sexFilter }} {{ item.contactTel }}</h3>
                     <p>{{ item.address }}</p>

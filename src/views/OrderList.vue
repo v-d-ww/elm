@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <ul class="order-detailet" v-show="item.isShowDetailet">
-                    <li v-for="odItem in item.list">
+                    <li v-for="odItem in item.list" :key="odItem.id">
                         <p>{{odItem.food.foodName}} x {{odItem.quantity}}</p>
                         <p>&#165;{{odItem.food.foodPrice*odItem.quantity}}</p>
                     </li>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <ul class="order-detailet" v-show="item.isShowDetailet">
-                    <li v-for="odItem in item.list">
+                    <li v-for="odItem in item.list" :key="odItem.id">
                         <p>{{odItem.food.foodName}} x {{odItem.quantity}}</p>
                         <p>&#165;{{odItem.food.foodPrice*odItem.quantity}}</p>
                     </li>

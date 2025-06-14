@@ -16,7 +16,7 @@
         <h3>{{ business.businessName }}</h3>
         <!-- 订单明细部分 -->
         <ul class="order-detailed">
-            <li v-for="item in cartArr">
+            <li v-for="item in cartArr" :key="item.id">
                 <div class="order-detailed-left">
                     <img :src="item.food.foodImg">
                     <p>{{ item.food.foodName }} x {{ item.quantity }}</p>

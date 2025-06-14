@@ -12,7 +12,7 @@
             <i class="fa fa-file-text-o"></i>
             <p>订单</p>
         </li>
-        <li>
+        <li @click="toMine">
             <i class="fa fa-user-o"></i>
             <p>我的</p>
         </li>
@@ -28,7 +28,10 @@ export default {
         },
         toOrderList() {
             this.$router.push({ path: '/orderList' });
-        }
+        },
+        toMine() {
+            this.$router.push({ path: '/mine' });
+        },
     }
 }
 </script>
