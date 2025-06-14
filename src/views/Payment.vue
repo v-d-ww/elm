@@ -26,14 +26,22 @@
         </ul>
         <!-- 支付方式部分 -->
         <ul class="payment-type">
-            <li>
-                <img src="../assets/alipay.png">
-                <i class="fa fa-check-circle"></i>
-            </li>
-            <li>
-                <img src="../assets/wechat.png">
-            </li>
-        </ul>
+  <li>
+    <label class="pay-radio-label">
+      
+      <img src="../assets/alipay.png">
+      <input type="radio" name="payType" value="alipay" v-model="payType" style="align-items: center;">
+      
+    </label>
+  </li>
+  <li>
+    <label class="pay-radio-label">
+      
+      <img src="../assets/wechat.png">
+      <input type="radio" name="payType" value="wechat" v-model="payType" style="align-items: center;">
+    </label>
+  </li>
+</ul>
         <div class="payment-button">
             <button>确认支付</button>
         </div>
@@ -52,7 +60,8 @@
                 orders: {
                     business: {}
                 },
-                isShowDetailet: false
+                isShowDetailet: false,
+                 payType: 'alipay' 
             }
         },
         created() {
@@ -192,5 +201,11 @@
         border-radius: 4px;
         background-color: #38CA73;
         color: #fff;
+    }
+    .pay-radio-label{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* 两端对齐 */
+        width: 100%;
     }
 </style>
